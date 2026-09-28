@@ -5,12 +5,19 @@ Finish the solution so that it returns the sum of all the multiples of 3 or 5 be
 Additionally, if the number is negative, return 0.
 Note: If a number is a multiple of both 3 and 5, only count it once. */
 
-function solution(number, limit){
-  let multipes = []
-  for (let i = number; i < limit; i+=number) {
-    multiples.push(i);
+function solution(number){
+  let multiples = [];
+  let sum = 0;
+  for (let i = 0; i < number; i++) {
+    if(i % 3 === 0 || i % 5 === 0) {
+        multiples.push(i);
+  }
+  }
+  for (const value of multiples) {
+    sum += value;
   }
   
-  
-  
+  console.log(sum);
 }
+
+solution(10);
