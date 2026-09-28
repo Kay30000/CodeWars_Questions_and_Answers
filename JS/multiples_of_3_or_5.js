@@ -17,7 +17,7 @@ function solution(number){
     sum += value;
   }
   
-  console.log(sum);
+  return sum;
 }
 
-solution(10);
+console.log(solution(10));
